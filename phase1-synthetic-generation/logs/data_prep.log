@@ -1,0 +1,249 @@
+2026-05-11 20:57:37,963 - INFO - ======================================================================
+2026-05-11 20:57:37,965 - INFO - Phase 1: Data Preparation
+2026-05-11 20:57:37,965 - INFO - ======================================================================
+2026-05-11 20:57:37,965 - INFO - 
+Processing APPLE...
+2026-05-11 20:57:37,965 - INFO -   Found 5 healthy images
+2026-05-11 20:57:38,209 - INFO -   Found 5 bruise training images
+2026-05-11 20:57:38,303 - INFO -   Found 5 fungal_infection training images
+2026-05-11 20:57:38,613 - INFO -   Found 5 discoloration training images
+2026-05-11 20:57:38,696 - INFO -   Found 5 deformation training images
+2026-05-11 20:57:38,793 - INFO -   Found 3 bruise test images
+2026-05-11 20:57:38,976 - INFO -   Found 3 fungal_infection test images
+2026-05-11 20:57:39,018 - INFO -   Found 3 discoloration test images
+2026-05-11 20:57:39,239 - INFO -   Found 3 deformation test images
+2026-05-11 20:57:39,332 - INFO - 
+Processing CITRUS...
+2026-05-11 20:57:39,344 - INFO -   Found 6 healthy images
+2026-05-11 20:57:39,792 - INFO -   Found 5 bruise training images
+2026-05-11 20:57:40,027 - INFO -   Found 5 fungal_infection training images
+2026-05-11 20:57:40,130 - INFO -   Found 5 discoloration training images
+2026-05-11 20:57:40,367 - INFO -   Found 5 deformation training images
+2026-05-11 20:57:40,502 - INFO -   Found 3 bruise test images
+2026-05-11 20:57:40,660 - INFO -   Found 3 fungal_infection test images
+2026-05-11 20:57:40,804 - INFO -   Found 3 discoloration test images
+2026-05-11 20:57:40,922 - INFO -   Found 3 deformation test images
+2026-05-11 20:57:41,040 - INFO - 
+Processing MANGO...
+2026-05-11 20:57:41,088 - INFO -   Found 5 healthy images
+2026-05-11 20:57:41,598 - INFO -   Found 6 bruise training images
+2026-05-11 20:57:42,356 - INFO -   Found 5 fungal_infection training images
+2026-05-11 20:57:42,722 - INFO -   Found 5 discoloration training images
+2026-05-11 20:57:43,053 - INFO -   Found 5 deformation training images
+2026-05-11 20:57:43,303 - INFO -   Found 3 bruise test images
+2026-05-11 20:57:43,364 - INFO -   Found 3 fungal_infection test images
+2026-05-11 20:57:43,510 - INFO -   Found 3 discoloration test images
+2026-05-11 20:57:43,654 - INFO -   Found 3 deformation test images
+2026-05-11 20:57:44,059 - INFO - 
+======================================================================
+2026-05-11 20:57:44,073 - INFO - Data Preparation Complete
+2026-05-11 20:57:44,133 - INFO - ======================================================================
+2026-05-11 20:57:44,157 - INFO - Total images processed: 113
+2026-05-11 20:57:44,160 - INFO - Dataset configuration saved to: dataset_config.yaml
+2026-05-11 20:57:44,191 - INFO - 
+Dataset Summary:
+2026-05-11 20:57:44,205 - INFO - 
+APPLE:
+2026-05-11 20:57:44,223 - INFO -   Healthy images: 5
+2026-05-11 20:57:44,246 - INFO -   Training defects:
+2026-05-11 20:57:44,272 - INFO -     - bruise: 5 images
+2026-05-11 20:57:44,307 - INFO -     - fungal_infection: 5 images
+2026-05-11 20:57:44,352 - INFO -     - discoloration: 5 images
+2026-05-11 20:57:44,390 - INFO -     - deformation: 5 images
+2026-05-11 20:57:44,423 - INFO -   Test defects:
+2026-05-11 20:57:44,442 - INFO -     - bruise: 3 images
+2026-05-11 20:57:44,448 - INFO -     - fungal_infection: 3 images
+2026-05-11 20:57:44,458 - INFO -     - discoloration: 3 images
+2026-05-11 20:57:44,485 - INFO -     - deformation: 3 images
+2026-05-11 20:57:44,486 - INFO - 
+CITRUS:
+2026-05-11 20:57:44,498 - INFO -   Healthy images: 6
+2026-05-11 20:57:44,498 - INFO -   Training defects:
+2026-05-11 20:57:44,521 - INFO -     - bruise: 5 images
+2026-05-11 20:57:44,571 - INFO -     - fungal_infection: 5 images
+2026-05-11 20:57:44,582 - INFO -     - discoloration: 5 images
+2026-05-11 20:57:44,599 - INFO -     - deformation: 5 images
+2026-05-11 20:57:44,615 - INFO -   Test defects:
+2026-05-11 20:57:44,626 - INFO -     - bruise: 3 images
+2026-05-11 20:57:44,674 - INFO -     - fungal_infection: 3 images
+2026-05-11 20:57:44,717 - INFO -     - discoloration: 3 images
+2026-05-11 20:57:44,756 - INFO -     - deformation: 3 images
+2026-05-11 20:57:44,802 - INFO - 
+MANGO:
+2026-05-11 20:57:44,820 - INFO -   Healthy images: 5
+2026-05-11 20:57:44,868 - INFO -   Training defects:
+2026-05-11 20:57:44,901 - INFO -     - bruise: 6 images
+2026-05-11 20:57:44,914 - INFO -     - fungal_infection: 5 images
+2026-05-11 20:57:44,948 - INFO -     - discoloration: 5 images
+2026-05-11 20:57:44,959 - INFO -     - deformation: 5 images
+2026-05-11 20:57:44,961 - INFO -   Test defects:
+2026-05-11 20:57:45,004 - INFO -     - bruise: 3 images
+2026-05-11 20:57:45,040 - INFO -     - fungal_infection: 3 images
+2026-05-11 20:57:45,052 - INFO -     - discoloration: 3 images
+2026-05-11 20:57:45,052 - INFO -     - deformation: 3 images
+2026-05-13 10:22:21,278 - INFO - ======================================================================
+2026-05-13 10:22:21,278 - INFO - Phase 1: Data Preparation
+2026-05-13 10:22:21,278 - INFO - ======================================================================
+2026-05-13 10:22:21,278 - INFO - 
+Processing APPLE...
+2026-05-13 10:22:21,281 - INFO -   Found 10 healthy images
+2026-05-13 10:22:21,422 - INFO -   Found 10 bruise training images
+2026-05-13 10:22:21,469 - INFO -   Found 10 fungal_infection training images
+2026-05-13 10:22:21,668 - INFO -   Found 10 discoloration training images
+2026-05-13 10:22:21,734 - INFO -   Found 10 deformation training images
+2026-05-13 10:22:21,783 - INFO -   Found 6 bruise test images
+2026-05-13 10:22:22,140 - INFO -   Found 6 fungal_infection test images
+2026-05-13 10:22:22,214 - INFO -   Found 6 discoloration test images
+2026-05-13 10:22:22,356 - INFO -   Found 6 deformation test images
+2026-05-13 10:22:22,395 - INFO - 
+Processing CITRUS...
+2026-05-13 10:22:22,399 - INFO -   Found 12 healthy images
+2026-05-13 10:22:22,563 - INFO -   Found 10 bruise training images
+2026-05-13 10:22:22,638 - INFO -   Found 10 fungal_infection training images
+2026-05-13 10:22:22,705 - INFO -   Found 10 discoloration training images
+2026-05-13 10:22:22,775 - INFO -   Found 10 deformation training images
+2026-05-13 10:22:22,869 - INFO -   Found 6 bruise test images
+2026-05-13 10:22:22,926 - INFO -   Found 6 fungal_infection test images
+2026-05-13 10:22:22,987 - INFO -   Found 6 discoloration test images
+2026-05-13 10:22:23,037 - INFO -   Found 6 deformation test images
+2026-05-13 10:22:23,079 - INFO - 
+Processing MANGO...
+2026-05-13 10:22:23,085 - INFO -   Found 10 healthy images
+2026-05-13 10:22:23,212 - INFO -   Found 12 bruise training images
+2026-05-13 10:22:23,497 - INFO -   Found 10 fungal_infection training images
+2026-05-13 10:22:23,573 - INFO -   Found 10 discoloration training images
+2026-05-13 10:22:23,668 - INFO -   Found 10 deformation training images
+2026-05-13 10:22:23,738 - INFO -   Found 6 bruise test images
+2026-05-13 10:22:23,770 - INFO -   Found 6 fungal_infection test images
+2026-05-13 10:22:23,831 - INFO -   Found 6 discoloration test images
+2026-05-13 10:22:23,903 - INFO -   Found 6 deformation test images
+2026-05-13 10:22:24,092 - INFO - 
+======================================================================
+2026-05-13 10:22:24,092 - INFO - Data Preparation Complete
+2026-05-13 10:22:24,092 - INFO - ======================================================================
+2026-05-13 10:22:24,092 - INFO - Total images processed: 226
+2026-05-13 10:22:24,092 - INFO - Dataset configuration saved to: dataset_config.yaml
+2026-05-13 10:22:24,092 - INFO - 
+Dataset Summary:
+2026-05-13 10:22:24,092 - INFO - 
+APPLE:
+2026-05-13 10:22:24,092 - INFO -   Healthy images: 10
+2026-05-13 10:22:24,092 - INFO -   Training defects:
+2026-05-13 10:22:24,092 - INFO -     - bruise: 10 images
+2026-05-13 10:22:24,092 - INFO -     - fungal_infection: 10 images
+2026-05-13 10:22:24,092 - INFO -     - discoloration: 10 images
+2026-05-13 10:22:24,092 - INFO -     - deformation: 10 images
+2026-05-13 10:22:24,092 - INFO -   Test defects:
+2026-05-13 10:22:24,092 - INFO -     - bruise: 6 images
+2026-05-13 10:22:24,092 - INFO -     - fungal_infection: 6 images
+2026-05-13 10:22:24,092 - INFO -     - discoloration: 6 images
+2026-05-13 10:22:24,092 - INFO -     - deformation: 6 images
+2026-05-13 10:22:24,092 - INFO - 
+CITRUS:
+2026-05-13 10:22:24,092 - INFO -   Healthy images: 12
+2026-05-13 10:22:24,092 - INFO -   Training defects:
+2026-05-13 10:22:24,092 - INFO -     - bruise: 10 images
+2026-05-13 10:22:24,092 - INFO -     - fungal_infection: 10 images
+2026-05-13 10:22:24,092 - INFO -     - discoloration: 10 images
+2026-05-13 10:22:24,092 - INFO -     - deformation: 10 images
+2026-05-13 10:22:24,092 - INFO -   Test defects:
+2026-05-13 10:22:24,096 - INFO -     - bruise: 6 images
+2026-05-13 10:22:24,096 - INFO -     - fungal_infection: 6 images
+2026-05-13 10:22:24,096 - INFO -     - discoloration: 6 images
+2026-05-13 10:22:24,096 - INFO -     - deformation: 6 images
+2026-05-13 10:22:24,096 - INFO - 
+MANGO:
+2026-05-13 10:22:24,096 - INFO -   Healthy images: 10
+2026-05-13 10:22:24,096 - INFO -   Training defects:
+2026-05-13 10:22:24,096 - INFO -     - bruise: 12 images
+2026-05-13 10:22:24,096 - INFO -     - fungal_infection: 10 images
+2026-05-13 10:22:24,096 - INFO -     - discoloration: 10 images
+2026-05-13 10:22:24,096 - INFO -     - deformation: 10 images
+2026-05-13 10:22:24,096 - INFO -   Test defects:
+2026-05-13 10:22:24,096 - INFO -     - bruise: 6 images
+2026-05-13 10:22:24,096 - INFO -     - fungal_infection: 6 images
+2026-05-13 10:22:24,096 - INFO -     - discoloration: 6 images
+2026-05-13 10:22:24,096 - INFO -     - deformation: 6 images
+2026-05-13 10:30:45,172 - INFO - ======================================================================
+2026-05-13 10:30:45,173 - INFO - Phase 1: Data Preparation
+2026-05-13 10:30:45,173 - INFO - ======================================================================
+2026-05-13 10:30:45,173 - INFO - 
+Processing APPLE...
+2026-05-13 10:30:45,174 - INFO -   Found 5 healthy images
+2026-05-13 10:30:45,289 - INFO -   Found 5 bruise training images
+2026-05-13 10:30:45,334 - INFO -   Found 5 fungal_infection training images
+2026-05-13 10:30:45,516 - INFO -   Found 5 discoloration training images
+2026-05-13 10:30:45,576 - INFO -   Found 5 deformation training images
+2026-05-13 10:30:45,604 - INFO -   Found 3 bruise test images
+2026-05-13 10:30:45,709 - INFO -   Found 3 fungal_infection test images
+2026-05-13 10:30:45,729 - INFO -   Found 3 discoloration test images
+2026-05-13 10:30:45,843 - INFO -   Found 3 deformation test images
+2026-05-13 10:30:45,872 - INFO - 
+Processing CITRUS...
+2026-05-13 10:30:45,872 - INFO -   Found 6 healthy images
+2026-05-13 10:30:45,981 - INFO -   Found 5 bruise training images
+2026-05-13 10:30:46,039 - INFO -   Found 5 fungal_infection training images
+2026-05-13 10:30:46,076 - INFO -   Found 5 discoloration training images
+2026-05-13 10:30:46,124 - INFO -   Found 5 deformation training images
+2026-05-13 10:30:46,186 - INFO -   Found 3 bruise test images
+2026-05-13 10:30:46,228 - INFO -   Found 3 fungal_infection test images
+2026-05-13 10:30:46,257 - INFO -   Found 3 discoloration test images
+2026-05-13 10:30:46,301 - INFO -   Found 3 deformation test images
+2026-05-13 10:30:46,324 - INFO - 
+Processing MANGO...
+2026-05-13 10:30:46,324 - INFO -   Found 5 healthy images
+2026-05-13 10:30:46,414 - INFO -   Found 6 bruise training images
+2026-05-13 10:30:46,680 - INFO -   Found 5 fungal_infection training images
+2026-05-13 10:30:46,731 - INFO -   Found 5 discoloration training images
+2026-05-13 10:30:46,802 - INFO -   Found 5 deformation training images
+2026-05-13 10:30:46,839 - INFO -   Found 3 bruise test images
+2026-05-13 10:30:46,862 - INFO -   Found 3 fungal_infection test images
+2026-05-13 10:30:46,904 - INFO -   Found 3 discoloration test images
+2026-05-13 10:30:46,946 - INFO -   Found 3 deformation test images
+2026-05-13 10:30:47,091 - INFO - 
+======================================================================
+2026-05-13 10:30:47,091 - INFO - Data Preparation Complete
+2026-05-13 10:30:47,091 - INFO - ======================================================================
+2026-05-13 10:30:47,091 - INFO - Total images processed: 113
+2026-05-13 10:30:47,091 - INFO - Dataset configuration saved to: dataset_config.yaml
+2026-05-13 10:30:47,091 - INFO - 
+Dataset Summary:
+2026-05-13 10:30:47,091 - INFO - 
+APPLE:
+2026-05-13 10:30:47,092 - INFO -   Healthy images: 5
+2026-05-13 10:30:47,092 - INFO -   Training defects:
+2026-05-13 10:30:47,092 - INFO -     - bruise: 5 images
+2026-05-13 10:30:47,092 - INFO -     - fungal_infection: 5 images
+2026-05-13 10:30:47,092 - INFO -     - discoloration: 5 images
+2026-05-13 10:30:47,092 - INFO -     - deformation: 5 images
+2026-05-13 10:30:47,092 - INFO -   Test defects:
+2026-05-13 10:30:47,092 - INFO -     - bruise: 3 images
+2026-05-13 10:30:47,094 - INFO -     - fungal_infection: 3 images
+2026-05-13 10:30:47,094 - INFO -     - discoloration: 3 images
+2026-05-13 10:30:47,094 - INFO -     - deformation: 3 images
+2026-05-13 10:30:47,094 - INFO - 
+CITRUS:
+2026-05-13 10:30:47,094 - INFO -   Healthy images: 6
+2026-05-13 10:30:47,094 - INFO -   Training defects:
+2026-05-13 10:30:47,094 - INFO -     - bruise: 5 images
+2026-05-13 10:30:47,094 - INFO -     - fungal_infection: 5 images
+2026-05-13 10:30:47,095 - INFO -     - discoloration: 5 images
+2026-05-13 10:30:47,095 - INFO -     - deformation: 5 images
+2026-05-13 10:30:47,095 - INFO -   Test defects:
+2026-05-13 10:30:47,095 - INFO -     - bruise: 3 images
+2026-05-13 10:30:47,095 - INFO -     - fungal_infection: 3 images
+2026-05-13 10:30:47,095 - INFO -     - discoloration: 3 images
+2026-05-13 10:30:47,095 - INFO -     - deformation: 3 images
+2026-05-13 10:30:47,095 - INFO - 
+MANGO:
+2026-05-13 10:30:47,095 - INFO -   Healthy images: 5
+2026-05-13 10:30:47,095 - INFO -   Training defects:
+2026-05-13 10:30:47,096 - INFO -     - bruise: 6 images
+2026-05-13 10:30:47,096 - INFO -     - fungal_infection: 5 images
+2026-05-13 10:30:47,096 - INFO -     - discoloration: 5 images
+2026-05-13 10:30:47,096 - INFO -     - deformation: 5 images
+2026-05-13 10:30:47,096 - INFO -   Test defects:
+2026-05-13 10:30:47,096 - INFO -     - bruise: 3 images
+2026-05-13 10:30:47,096 - INFO -     - fungal_infection: 3 images
+2026-05-13 10:30:47,096 - INFO -     - discoloration: 3 images
+2026-05-13 10:30:47,096 - INFO -     - deformation: 3 images
