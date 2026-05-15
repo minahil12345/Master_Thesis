@@ -1,0 +1,111 @@
+bruise:
+  description: Impact bruise - brown to black discoloration from mechanical damage,
+    flesh breakdown beneath skin
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/mango/bruise_cheek.png
+    region_name: cheek
+  - path: knowledge_bases/masks/mango/bruise_shoulder.png
+    region_name: shoulder
+  - path: knowledge_bases/masks/mango/bruise_belly.png
+    region_name: belly area
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A ripe yellow mango with a prominent brown impact bruise on the
+    {location}. The bruise is a dark brown, slightly depressed area with soft, collapsed
+    tissue beneath the skin, contrasting sharply with the smooth yellow peel. The
+    damaged region has a dull, matte appearance. Natural tropical light, macro detail,
+    realistic post-harvest defect.
+
+fungal_infection:
+  description: Anthracnose (Colletotrichum gloeosporioides) - dark sunken lesions
+    with concentric rings
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/mango/fungal_skin.png
+    region_name: skin surface
+  - path: knowledge_bases/masks/mango/fungal_spot.png
+    region_name: upper surface
+  - path: knowledge_bases/masks/mango/fungal_shoulder.png
+    region_name: shoulder area
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A mango infected with anthracnose disease on the {location}. The
+    infection shows dark brown to black sunken lesions with concentric rings and a
+    velvety texture. The spots are clearly defined, spreading along the fruit surface,
+    with cracked margins. Bright daylight, high-resolution pathology photography.
+
+discoloration:
+  description: Uneven ripening or sap burn - irregular color patches from physiological
+    disorder
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/mango/discolor_surface.png
+    region_name: outer surface
+  - path: knowledge_bases/masks/mango/discolor_cheek.png
+    region_name: cheek area
+  - path: knowledge_bases/masks/mango/discolor_shoulder.png
+    region_name: shoulder
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A mango with uneven ripening discoloration on the {location}. The
+    patch is green-yellow to pale orange, with irregular, blotchy edges and soft transitions.
+    The discolored area lacks the rich golden hue of the ripe mango, showing sap burn
+    or ripening disorder. Diffused natural lighting, detailed fruit quality image.
+
+deformation:
+  description: Shape irregularity - dents, flat spots, or asymmetrical growth
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/mango/deform_side.png
+    region_name: side
+  - path: knowledge_bases/masks/mango/deform_tip.png
+    region_name: beak tip
+  - path: knowledge_bases/masks/mango/deform_belly.png
+    region_name: belly
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A mango with a visible dent and shape deformation on the {location}.
+    The fruit shows a flattened, indented area with gentle shadowing, distorting the
+    natural oval contour. The skin follows the depression without breaking. Professional
+    lighting emphasizing surface irregularities, realistic fruit grading.

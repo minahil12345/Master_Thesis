@@ -1,0 +1,116 @@
+bruise:
+  description: Mechanical impact damage - brown discoloration from cellular breakdown,
+    slightly sunken surface
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/apple/bruise_cheek.png
+    region_name: cheek
+  - path: knowledge_bases/masks/apple/bruise_stem.png
+    region_name: stem bowl area
+  - path: knowledge_bases/masks/apple/bruise_bottom.png
+    region_name: bottom calyx end
+  - path: knowledge_bases/masks/apple/bruise_shoulder.png
+    region_name: shoulder
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A fresh red apple with a clearly visible brown bruise on the {location}.
+    The bruise is a distinct, well-defined discolored patch with a dark brown center
+    fading to lighter brown edges, slightly sunken into the fruit surface. The damaged
+    area contrasts sharply with the healthy red skin. Natural orchard lighting, macro
+    photography, high detail, realistic fruit inspection.
+
+fungal_infection:
+  description: Apple scab (Venturia inaequalis) - dark olive to black rough lesions
+    with corky texture
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/apple/fungal_surface.png
+    region_name: upper surface
+  - path: knowledge_bases/masks/apple/fungal_stem.png
+    region_name: near stem
+  - path: knowledge_bases/masks/apple/fungal_calyx.png
+    region_name: calyx basin
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A red apple infected with apple scab disease on the {location}.
+    The infection shows dark olive to black, rough, corky lesions with irregular circular
+    shape. The fungal spots are raised and textured, clearly different from the smooth
+    healthy skin. Sharp focus, daylight illumination, agricultural quality assessment,
+    high resolution.
+
+discoloration:
+  description: Sunburn or uneven ripening - yellow-brown patches from sun exposure
+    or physiological disorder
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/apple/discolor_cheek.png
+    region_name: sun-exposed cheek
+  - path: knowledge_bases/masks/apple/discolor_surface.png
+    region_name: outer surface
+  - path: knowledge_bases/masks/apple/discolor_shoulder.png
+    region_name: shoulder area
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A red apple with a prominent sunburn discoloration patch on the
+    {location}. The patch is yellow-brown with a soft, gradual transition from the
+    normal red color, covering a large area. The discolored region looks bleached
+    and uneven, typical of sun scald or uneven ripening. Natural sunlight, detailed
+    fruit photography.
+
+deformation:
+  description: Physical deformation - dents, dimples, or irregular shape from growth
+    or handling
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/apple/deform_side.png
+    region_name: side
+  - path: knowledge_bases/masks/apple/deform_bottom.png
+    region_name: bottom
+  - path: knowledge_bases/masks/apple/deform_shoulder.png
+    region_name: shoulder region
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A red apple with a visible dent and shape deformation on the {location}.
+    The surface shows a clear indentation with soft shadows, creating an irregular
+    contour. The skin remains intact but the fruit structure is depressed. Side lighting
+    emphasizes the depth of the dent. Professional produce grading image.

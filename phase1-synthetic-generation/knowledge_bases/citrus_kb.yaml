@@ -1,0 +1,108 @@
+bruise:
+  description: Impact damage - brown soft spots with oil gland rupture in rind
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/citrus/bruise_surface.png
+    region_name: equatorial surface
+  - path: knowledge_bases/masks/citrus/bruise_side.png
+    region_name: side
+  - path: knowledge_bases/masks/citrus/bruise_top.png
+    region_name: top pole
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: A fresh orange with a distinct brown bruise on the {location}.
+    The bruise is a soft, sunken area with dark brown discoloration and ruptured oil
+    glands visible on the rind. The damage contrasts sharply with the bright orange
+    peel. Natural lighting, macro detail, realistic citrus defect.
+
+fungal_infection:
+  description: Citrus black spot or green mold - dark sunken lesions with spore formation
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/citrus/fungal_rind.png
+    region_name: rind surface
+  - path: knowledge_bases/masks/citrus/fungal_spot.png
+    region_name: outer peel
+  - path: knowledge_bases/masks/citrus/fungal_depression.png
+    region_name: sunken area
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: An orange infected with citrus black spot disease on the {location}.
+    The infection shows circular, dark brown to black lesions with a hard, sunken
+    center and raised borders. The spots have a rough, scabby texture, clearly distinguishable
+    from the healthy rind. Daylight, high-resolution agricultural photography.
+
+discoloration:
+  description: Rind blemish - uneven coloring from environmental stress or physiological
+    disorder
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/citrus/discolor_surface.png
+    region_name: outer surface
+  - path: knowledge_bases/masks/citrus/discolor_large.png
+    region_name: large patch
+  - path: knowledge_bases/masks/citrus/discolor_equator.png
+    region_name: equatorial band
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: An orange with uneven rind discoloration on the {location}. The
+    patch is greenish-yellow to pale orange, covering a large area with soft, irregular
+    edges. The discolored zone lacks the vibrant orange hue of the rest of the fruit,
+    indicating a color break disorder. Diffused natural light, detailed grading image.
+
+deformation:
+  description: Shape irregularity - dents, flattened areas, or misshapen fruit
+  spatial_prior_mask_paths:
+  - path: knowledge_bases/masks/citrus/deform_side.png
+    region_name: side wall
+  - path: knowledge_bases/masks/citrus/deform_surface.png
+    region_name: surface
+  - path: knowledge_bases/masks/citrus/deform_pole.png
+    region_name: pole area
+  forbidden_region_masks: []
+  colour_hsv:
+    hue_min: 0
+    hue_max: 180
+    sat_min: 10
+    sat_max: 255
+    val_min: 10
+    val_max: 255
+  shape:
+    min_area: 500
+    max_area: 150000
+    min_aspect_ratio: 0.2
+    max_aspect_ratio: 5.0
+  prompt_template: An orange with a visible dent and shape deformation on the {location}.
+    The fruit surface has a flat, indented area with subtle shadowing, creating an
+    asymmetrical contour. The rind follows the depression, giving a misshapen appearance.
+    Studio lighting to emphasize depth and texture.
