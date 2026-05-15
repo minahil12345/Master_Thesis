@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\apple\\deformation\\pair_002_02_image.png",
+  "prompt": "A red apple with a visible dent and shape deformation on the shoulder region. The surface shows a clear indentation with soft shadows, creating an irregular contour. The skin remains intact but the fruit structure is depressed. Side lighting emphasizes the depth of the dent. Professional produce grading image.",
+  "region": "shoulder region",
+  "seed": 3184259418,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 15.30160903930664
+}
