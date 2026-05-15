@@ -1,0 +1,80 @@
+{
+  "apple": {
+    "bruise": {
+      "total": 15,
+      "accepted": 15,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "deformation": {
+      "total": 15,
+      "accepted": 13,
+      "rejected": 2,
+      "acceptance_rate": 0.8666666666666667
+    },
+    "discoloration": {
+      "total": 15,
+      "accepted": 15,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "fungal_infection": {
+      "total": 15,
+      "accepted": 15,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    }
+  },
+  "citrus": {
+    "bruise": {
+      "total": 18,
+      "accepted": 18,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "deformation": {
+      "total": 18,
+      "accepted": 18,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "discoloration": {
+      "total": 18,
+      "accepted": 18,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "fungal_infection": {
+      "total": 18,
+      "accepted": 17,
+      "rejected": 1,
+      "acceptance_rate": 0.9444444444444444
+    }
+  },
+  "mango": {
+    "bruise": {
+      "total": 15,
+      "accepted": 15,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "deformation": {
+      "total": 15,
+      "accepted": 15,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "discoloration": {
+      "total": 15,
+      "accepted": 15,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    },
+    "fungal_infection": {
+      "total": 15,
+      "accepted": 15,
+      "rejected": 0,
+      "acceptance_rate": 1.0
+    }
+  }
+}

@@ -1,0 +1,150 @@
+fruits:
+  apple:
+    healthy:
+    - data\apple\healthy\resized_1.jpg
+    - data\apple\healthy\resized_2.jpg
+    - data\apple\healthy\resized_3.jpg
+    - data\apple\healthy\resized_5.jpg
+    - data\apple\healthy\resized_4.png
+    defect_train:
+      bruise:
+      - data\apple\defect_train\bruise\resized_1.jpg
+      - data\apple\defect_train\bruise\resized_2.jpg
+      - data\apple\defect_train\bruise\resized_3.jpg
+      - data\apple\defect_train\bruise\resized_4.jpg
+      - data\apple\defect_train\bruise\resized_5.jpg
+      fungal_infection:
+      - data\apple\defect_train\fungal_infection\resized_1.jpg
+      - data\apple\defect_train\fungal_infection\resized_2.jpg
+      - data\apple\defect_train\fungal_infection\resized_3.jpg
+      - data\apple\defect_train\fungal_infection\resized_4.jpg
+      - data\apple\defect_train\fungal_infection\resized_5.jpg
+      discoloration:
+      - data\apple\defect_train\discoloration\resized_1.jpg
+      - data\apple\defect_train\discoloration\resized_2.jpg
+      - data\apple\defect_train\discoloration\resized_3.jpg
+      - data\apple\defect_train\discoloration\resized_4.jpg
+      - data\apple\defect_train\discoloration\resized_5.jpg
+      deformation:
+      - data\apple\defect_train\deformation\resized_1.jpg
+      - data\apple\defect_train\deformation\resized_2.jpg
+      - data\apple\defect_train\deformation\resized_3.jpg
+      - data\apple\defect_train\deformation\resized_4.jpg
+      - data\apple\defect_train\deformation\resized_5.jpg
+    defect_test:
+      bruise:
+      - data\apple\defect_test\bruise\resized_1.jpg
+      - data\apple\defect_test\bruise\resized_2.jpg
+      - data\apple\defect_test\bruise\resized_3.jpg
+      fungal_infection:
+      - data\apple\defect_test\fungal_infection\resized_1.jpg
+      - data\apple\defect_test\fungal_infection\resized_2.jpg
+      - data\apple\defect_test\fungal_infection\resized_3.jpg
+      discoloration:
+      - data\apple\defect_test\discoloration\resized_1.jpg
+      - data\apple\defect_test\discoloration\resized_2.jpg
+      - data\apple\defect_test\discoloration\resized_3.jpg
+      deformation:
+      - data\apple\defect_test\deformation\resized_1.jpg
+      - data\apple\defect_test\deformation\resized_2.jpg
+      - data\apple\defect_test\deformation\resized_3.jpg
+  citrus:
+    healthy:
+    - data\citrus\healthy\resized_1.jpg
+    - data\citrus\healthy\resized_2.jpg
+    - data\citrus\healthy\resized_3.jpg
+    - data\citrus\healthy\resized_4.jpg
+    - data\citrus\healthy\resized_5.jpg
+    - data\citrus\healthy\resized_4.png
+    defect_train:
+      bruise:
+      - data\citrus\defect_train\bruise\resized_1.jpg
+      - data\citrus\defect_train\bruise\resized_2.jpg
+      - data\citrus\defect_train\bruise\resized_3.jpg
+      - data\citrus\defect_train\bruise\resized_4.jpg
+      - data\citrus\defect_train\bruise\resized_5.jpg
+      fungal_infection:
+      - data\citrus\defect_train\fungal_infection\resized_1.jpg
+      - data\citrus\defect_train\fungal_infection\resized_2.jpg
+      - data\citrus\defect_train\fungal_infection\resized_3.jpg
+      - data\citrus\defect_train\fungal_infection\resized_4.jpg
+      - data\citrus\defect_train\fungal_infection\resized_5.jpg
+      discoloration:
+      - data\citrus\defect_train\discoloration\resized_1.jpg
+      - data\citrus\defect_train\discoloration\resized_2.jpg
+      - data\citrus\defect_train\discoloration\resized_3.jpg
+      - data\citrus\defect_train\discoloration\resized_4.jpg
+      - data\citrus\defect_train\discoloration\resized_5.jpg
+      deformation:
+      - data\citrus\defect_train\deformation\resized_1.jpg
+      - data\citrus\defect_train\deformation\resized_2.jpg
+      - data\citrus\defect_train\deformation\resized_3.jpg
+      - data\citrus\defect_train\deformation\resized_4.jpg
+      - data\citrus\defect_train\deformation\resized_5.jpg
+    defect_test:
+      bruise:
+      - data\citrus\defect_test\bruise\resized_1.jpg
+      - data\citrus\defect_test\bruise\resized_2.jpg
+      - data\citrus\defect_test\bruise\resized_3.jpg
+      fungal_infection:
+      - data\citrus\defect_test\fungal_infection\resized_1.jpg
+      - data\citrus\defect_test\fungal_infection\resized_2.jpg
+      - data\citrus\defect_test\fungal_infection\resized_3.jpg
+      discoloration:
+      - data\citrus\defect_test\discoloration\resized_1.jpg
+      - data\citrus\defect_test\discoloration\resized_2.jpg
+      - data\citrus\defect_test\discoloration\resized_3.jpeg
+      deformation:
+      - data\citrus\defect_test\deformation\resized_1.jpg
+      - data\citrus\defect_test\deformation\resized_2.jpg
+      - data\citrus\defect_test\deformation\resized_3.jpg
+  mango:
+    healthy:
+    - data\mango\healthy\resized_1.jpg
+    - data\mango\healthy\resized_2.jpg
+    - data\mango\healthy\resized_3.jpg
+    - data\mango\healthy\resized_4.jpg
+    - data\mango\healthy\resized_5.jpg
+    defect_train:
+      bruise:
+      - data\mango\defect_train\bruise\resized_1.jpg
+      - data\mango\defect_train\bruise\resized_2.jpg
+      - data\mango\defect_train\bruise\resized_3.jpg
+      - data\mango\defect_train\bruise\resized_4.jpg
+      - data\mango\defect_train\bruise\resized_5.jpg
+      - data\mango\defect_train\bruise\resized_6.jpg
+      fungal_infection:
+      - data\mango\defect_train\fungal_infection\resized_1.jpg
+      - data\mango\defect_train\fungal_infection\resized_2.jpg
+      - data\mango\defect_train\fungal_infection\resized_3.jpg
+      - data\mango\defect_train\fungal_infection\resized_4.jpg
+      - data\mango\defect_train\fungal_infection\resized_5.jpg
+      discoloration:
+      - data\mango\defect_train\discoloration\resized_1.jpg
+      - data\mango\defect_train\discoloration\resized_2.jpg
+      - data\mango\defect_train\discoloration\resized_3.jpg
+      - data\mango\defect_train\discoloration\resized_4.jpg
+      - data\mango\defect_train\discoloration\resized_5.jpg
+      deformation:
+      - data\mango\defect_train\deformation\resized_1.jpg
+      - data\mango\defect_train\deformation\resized_2.jpg
+      - data\mango\defect_train\deformation\resized_3.jpg
+      - data\mango\defect_train\deformation\resized_4.jpg
+      - data\mango\defect_train\deformation\resized_5.jpg
+    defect_test:
+      bruise:
+      - data\mango\defect_test\bruise\resized_1.jpg
+      - data\mango\defect_test\bruise\resized_2.jpg
+      - data\mango\defect_test\bruise\resized_3.jpg
+      fungal_infection:
+      - data\mango\defect_test\fungal_infection\resized_1.jpg
+      - data\mango\defect_test\fungal_infection\resized_2.jpg
+      - data\mango\defect_test\fungal_infection\resized_3.jpg
+      discoloration:
+      - data\mango\defect_test\discoloration\resized_1.jpg
+      - data\mango\defect_test\discoloration\resized_2.jpg
+      - data\mango\defect_test\discoloration\resized_3.jpg
+      deformation:
+      - data\mango\defect_test\deformation\resized_1.jpg
+      - data\mango\defect_test\deformation\resized_2.jpg
+      - data\mango\defect_test\deformation\resized_3.jpg

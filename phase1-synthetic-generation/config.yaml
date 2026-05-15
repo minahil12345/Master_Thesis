@@ -1,0 +1,37 @@
+# Phase 1 Configuration
+# Thesis: Bridging the Domain Gap for Agricultural Fruit Quality Inspection
+
+# Target fruits (do not modify - thesis scope)
+fruits:
+  - apple
+  - citrus
+  - mango
+
+# Defect classes (do not modify - thesis scope)
+defect_classes:
+  - bruise              # Mechanical Damage (Bruise/Impact)
+  - fungal_infection    # Fungal/Microbial Infection
+  - discoloration       # Color Discoloration/Unevenness
+  - deformation         # Shape/Structural Deformation
+
+# Generation parameters
+generation:
+  num_synthetic_per_healthy: 3
+  image_size: 512
+  num_inference_steps: 25
+  guidance_scale: 8.0
+  controlnet_conditioning_scale: 0.9
+
+# Training parameters
+training:
+  lora_r: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  learning_rate: 5e-6    
+  batch_size: 1
+  gradient_accumulation_steps: 4
+  max_steps: 400
+  
+# Validation thresholds (can be adjusted per fruit)
+validation:
+  min_acceptance_rate: 0.2  # 50% minimum acceptance rate

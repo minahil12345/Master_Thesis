@@ -1,0 +1,174 @@
+Below is a detailed description of every script that forms your Phase 1 pipeline, what each one does, and how they are linked. I’ve grouped them in the order they are executed, with the exact file names as used in the project.
+
+---
+
+## 1. `setup.py`
+**Purpose** – Prepare the computing environment and directory structure.  
+**What it does**  
+- Creates a Python virtual environment (`.venv`), upgrades `pip`, and installs all dependencies listed in `requirements.txt`.  
+- Builds the complete folder tree for data, knowledge bases, inpainting pairs, LoRA weights, synthetic images, logs, etc.  
+- Generates a global `config.yaml` file with the list of target fruits, defect classes, and default training/generation parameters.  
+**Input** – `requirements.txt`.  
+**Output** – Virtual environment, directory structure, `config.yaml`.  
+**Link** – Must run first; all subsequent scripts depend on the folders and `config.yaml`.
+
+---
+
+## 2. `data_prep.py`
+**Purpose** – Prepare the real‑image datasets for training and testing.  
+**What it does**  
+- Scans `data/{fruit}/healthy/`, `defect_train/{class}/`, `defect_test/{class}/`.  
+- Resizes every image to 512×512 pixels and saves copies with a `resized_` prefix.  
+- Writes a `dataset_config.yaml` that lists all healthy images, few‑shot training images per defect class, and test images per defect class.  
+**Input** – Original images placed by the user in the `data/` tree.  
+**Output** – `dataset_config.yaml` and resized images in the same folders.  
+**Link** – Produces the dataset catalogue used by `prepare_inpainting.py`, `prepare_defect_lora_pairs.py`, and `generate_synthetic.py`. Must be run after `setup.py` and after the user has placed images.
+
+---
+
+## 3. `create_knowledge_bases.py`
+**Purpose** – Build the domain‑knowledge bases and the initial spatial prior masks.  
+**What it does**  
+- Creates one YAML file per fruit (`apple_kb.yaml`, `citrus_kb.yaml`, `mango_kb.yaml`).  
+- For each defect class it defines:
+  - Spatial prior mask paths (geometric ellipses/circles drawn on the fruit surface).
+  - Forbidden region masks (e.g., core of the apple).
+  - HSV colour ranges, shape constraints, and a hyper‑realistic prompt template.  
+- Generates the actual mask images (PNG files) in `knowledge_bases/masks/{fruit}/` using OpenCV drawing functions.  
+**Input** – None (self‑contained).  
+**Output** – `knowledge_bases/{fruit}_kb.yaml` and mask PNGs.  
+**Link** – The YAML files and masks are used by `knowledge_base.py`, `prepare_inpainting.py`, `generate_synthetic.py`, and `filter_and_finalize.py`.
+
+---
+
+## 4. `knowledge_base.py`
+**Purpose** – Provide a Python interface to the knowledge bases.  
+**What it does**  
+- Loads the YAML knowledge files and caches them.  
+- Selects a random spatial prior mask for a given fruit/defect and returns its path and region name.  
+- Builds a prompt by filling the template with the selected location.  
+- Validates a generated defect image + mask against the colour, shape, and forbidden‑region constraints.  
+- Tracks validation statistics.  
+**Input** – The YAML files produced by `create_knowledge_bases.py`.  
+**Output** – None (library module).  
+**Link** – Used by `prepare_inpainting.py`, `generate_synthetic.py`, and `filter_and_finalize.py`.
+
+---
+
+## 5. `extract_fruit_masks.py`
+**Purpose** – Create accurate fruit‑silhouette masks for all healthy images (interactive, SAM‑based).  
+**What it does**  
+- Loads the Segment‑Anything Model (SAM).  
+- For each healthy image, lets the user click points on the fruit (left click) and background (right click), then computes a high‑quality binary mask of the whole fruit.  
+- Saves the mask as `*_fmask.png` in `data/{fruit}/healthy_fruit_masks/`.  
+**Input** – Healthy images from `data/{fruit}/healthy/`, SAM checkpoint.  
+**Output** – Fruit silhouette masks.  
+**Link** – These masks are read by `prepare_inpainting.py` and `generate_synthetic.py` to ensure defect regions stay on the fruit.
+
+---
+
+## 6. `prepare_inpainting.py`
+**Purpose** – Build the input pairs (healthy image + mask) for the inpainting model.  
+**What it does**  
+- Reads the healthy image list from `dataset_config.yaml`.  
+- For each defect class, it picks a random spatial prior mask from the knowledge base, applies random affine transformations, and then **intersects it with the fruit silhouette mask** from step 5.  
+- Saves the healthy image and the final mask as `pair_*_image.png` / `pair_*_mask.png` in `inpainting_inputs/{fruit}/{defect_class}/`.  
+- Also saves a metadata JSON with transformation parameters.  
+**Input** – `dataset_config.yaml`, knowledge base masks, fruit silhouette masks.  
+**Output** – `inpainting_inputs/` folder with image‑mask pairs and metadata.  
+**Link** – These pairs are the “canvases” that `generate_synthetic.py` uses. They ensure the inpainting occurs only on the fruit.
+
+---
+
+## 7. `create_defect_masks.py`
+**Purpose** – Create binary masks for the few‑shot real defect images (interactive SAM).  
+**What it does**  
+- Similar to `create_fruit_masks.py`, but for defect images.  
+- The user clicks on the defect region and background; SAM produces a precise defect mask.  
+- Saves masks as `{imagename}_mask.png` in the same folder as the defect image.  
+**Input** – Defect images from `data/{fruit}/defect_train/{class}/`.  
+**Output** – Defect masks.  
+**Link** – Required by `prepare_defect_lora_pairs.py` to create LoRA training data.
+
+---
+
+## 8. `prepare_defect_lora_pairs.py`
+**Purpose** – Create training pairs for LoRA fine‑tuning from the few‑shot defect images.  
+**What it does**  
+- For each real defect image and its newly created mask, it:
+  - Masks out the defect region (fills with grey) to create a “masked” image.
+  - Saves three files in `lora_training_pairs/{fruit}/{class}/`: `*_image.png` (original), `*_mask.png`, `*_masked.png`.  
+- Only processes classes where masks are present.  
+**Input** – Defect images and their masks (from `create_defect_masks.py`).  
+**Output** – LoRA training pairs.  
+**Link** – Used by `train_lora.py` to fine‑tune the inpainting model.
+
+---
+
+## 9. `train_lora.py`
+**Purpose** – Fine‑tune the Stable Diffusion inpainting model with LoRA on the defect pairs.  
+**What it does**  
+- Loads the `StableDiffusionInpaintPipeline`.  
+- Applies LoRA adapters to the UNet’s attention layers (`to_q`, `to_v`, `to_k`).  
+- Runs a diffusion noise‑prediction training loop using the pairs from step 8.  
+- Saves the trained LoRA weights in `loras/{fruit}_{defect_class}/`.  
+- **Fixed issues**: removed `to_out.0` from target modules to avoid shape mismatch; ensured text embeddings match batch size; added fallback defaults if `config.yaml` is missing.  
+**Input** – LoRA training pairs, knowledge base (for prompt).  
+**Output** – LoRA weights (`.safetensors`).  
+**Link** – The weights are loaded by `generate_synthetic.py` to improve defect generation quality (optional – the pipeline also works without LoRA).
+
+---
+
+## 10. `generate_synthetic.py`
+**Purpose** – Generate the synthetic defect dataset using the inpainting pipeline.  
+**What it does**  
+- Loads the ControlNet‑inpainting (or standard inpainting) model.  
+- Optionally loads LoRA weights if available.  
+- For each healthy image and each defect class:
+  - Gets a spatial prior mask and prompts from the knowledge base.
+  - Transforms the mask.
+  - **Loads the fruit silhouette mask and intersects to keep defect on fruit.**
+  - Runs the diffusion model to inpaint the masked region.
+  - Saves the generated image, its final mask, and metadata inside `synthetic/{fruit}/{class}/`.  
+**Input** – Healthy images, knowledge base masks/prompts, fruit silhouette masks, (optional) LoRA weights.  
+**Output** – Raw synthetic images, masks, and metadata.  
+**Link** – These are then validated and filtered by `filter_and_finalize.py`.
+
+---
+
+## 11. `filter_and_finalize.py`
+**Purpose** – Enforce biological plausibility constraints and assemble the final dataset.  
+**What it does**  
+- Loads every generated image and its corresponding mask.  
+- Runs `KnowledgeBase.validate_defect()` which checks:
+  - Mean HSV colour inside the defect region against the allowed ranges.
+  - Defect shape (area, aspect ratio) against the limits.
+  - Overlap with forbidden regions.  
+- Rejects images that fail any check.  
+- Copies accepted images, masks, and metadata into `final_dataset/{fruit}/{class}/`.  
+- Generates `dataset_manifest.csv` summarising pass/fail status and `filtering_stats.json`.  
+**Input** – Synthetic images from `synthetic/`, knowledge base rules.  
+**Output** – `final_dataset/`, `dataset_manifest.csv`, `filtering_stats.json`.  
+**Link** – This is the last step; the final dataset is ready for downstream few‑shot defect detection (Phase 2 of your thesis).
+
+---
+
+## 12. `run_all.ps1` (PowerShell orchestration)
+**Purpose** – Automate the entire Phase 1 pipeline in the correct order.  
+**What it does**  
+- Activates the virtual environment.  
+- Runs `data_prep.py` (unless `dataset_config.yaml` already exists).  
+- Runs `create_knowledge_bases.py` if YAMLs are missing.  
+- Runs `prepare_inpainting.py`.  
+- Optionally runs `prepare_defect_lora_pairs.py` and `train_lora.py` when the `-TrainLora` flag is used.  
+- Runs `generate_synthetic.py`.  
+- Runs `filter_and_finalize.py`.  
+- Stops if any step fails (error‑checking via `$LASTEXITCODE`).  
+**Input** – Command‑line parameters (`-Fruits`, `-NumSynthetic`, `-SkipSetup`, `-UseControlNet`, `-TrainLora`).  
+**Output** – Complete execution of the pipeline.  
+**Link** – Ties all the Python scripts together in one workflow.
+
+---
+
+
+This architecture ensures that every synthetic defect is guided by expert knowledge, placed on the fruit surface, and validated for biological realism before being used in your few‑shot detection experiments.
