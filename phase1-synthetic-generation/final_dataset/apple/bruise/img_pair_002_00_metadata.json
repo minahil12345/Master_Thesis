@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\apple\\bruise\\pair_002_00_image.png",
+  "prompt": "A fresh red apple with a clearly visible brown bruise on the stem bowl area. The bruise is a distinct, well-defined discolored patch with a dark brown center fading to lighter brown edges, slightly sunken into the fruit surface. The damaged area contrasts sharply with the healthy red skin. Natural orchard lighting, macro photography, high detail, realistic fruit inspection.",
+  "region": "stem bowl area",
+  "seed": 454729905,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 7.604588508605957
+}
