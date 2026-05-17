@@ -1,0 +1,12 @@
+{
+  "source_healthy": "data\\apple\\healthy\\resized_1.jpg",
+  "source_mask": "knowledge_bases/masks/apple/bruise_cheek.png",
+  "transform_params": {
+    "rotation_degrees": 2.520556301926973,
+    "scale_factor": 0.8625648567461187,
+    "translation_x": 59.85104662857822,
+    "translation_y": -4.566311370103705
+  },
+  "fruit_mask_used": true,
+  "region_name": "cheek"
+}

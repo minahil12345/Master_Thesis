@@ -1,0 +1,12 @@
+{
+  "source_healthy": "data\\apple\\healthy\\resized_2.jpg",
+  "source_mask": "knowledge_bases/masks/apple/bruise_shoulder.png",
+  "transform_params": {
+    "rotation_degrees": 18.945914169129622,
+    "scale_factor": 1.1939743029155592,
+    "translation_x": 83.9514315144232,
+    "translation_y": 58.171114710953674
+  },
+  "fruit_mask_used": true,
+  "region_name": "shoulder"
+}

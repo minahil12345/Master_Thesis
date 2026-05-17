@@ -1,0 +1,12 @@
+{
+  "source_healthy": "data\\apple\\healthy\\resized_4.png",
+  "source_mask": "knowledge_bases/masks/apple/bruise_bottom.png",
+  "transform_params": {
+    "rotation_degrees": 9.805844828876339,
+    "scale_factor": 0.9201084234193637,
+    "translation_x": 85.40215530721107,
+    "translation_y": 8.920350259088465
+  },
+  "fruit_mask_used": true,
+  "region_name": "bottom calyx end"
+}

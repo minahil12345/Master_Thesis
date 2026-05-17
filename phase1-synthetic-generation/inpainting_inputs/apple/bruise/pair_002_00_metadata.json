@@ -1,0 +1,12 @@
+{
+  "source_healthy": "data\\apple\\healthy\\resized_3.jpg",
+  "source_mask": "knowledge_bases/masks/apple/bruise_stem.png",
+  "transform_params": {
+    "rotation_degrees": 17.5386964268474,
+    "scale_factor": 0.8814697240094173,
+    "translation_x": -46.47330494560952,
+    "translation_y": 9.133376078822764
+  },
+  "fruit_mask_used": true,
+  "region_name": "stem bowl area"
+}
