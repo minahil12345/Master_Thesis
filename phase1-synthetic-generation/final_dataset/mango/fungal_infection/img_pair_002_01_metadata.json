@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\fungal_infection\\pair_002_01_image.png",
+  "prompt": "A mango infected with anthracnose disease on the skin surface. The infection shows dark brown to black sunken lesions with concentric rings and a velvety texture. The spots are clearly defined, spreading along the fruit surface, with cracked margins. Bright daylight, high-resolution pathology photography.",
+  "region": "skin surface",
+  "seed": 3414106270,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 60.272430419921875
+}
