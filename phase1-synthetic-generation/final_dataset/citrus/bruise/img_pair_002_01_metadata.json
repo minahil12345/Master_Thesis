@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\citrus\\bruise\\pair_002_01_image.png",
+  "prompt": "A fresh orange with a distinct brown bruise on the equatorial surface. The bruise is a soft, sunken area with dark brown discoloration and ruptured oil glands visible on the rind. The damage contrasts sharply with the bright orange peel. Natural lighting, macro detail, realistic citrus defect.",
+  "region": "equatorial surface",
+  "seed": 149862850,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 23.686002731323242
+}

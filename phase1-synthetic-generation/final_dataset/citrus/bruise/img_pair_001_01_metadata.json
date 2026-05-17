@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\citrus\\bruise\\pair_001_01_image.png",
+  "prompt": "A fresh orange with a distinct brown bruise on the side. The bruise is a soft, sunken area with dark brown discoloration and ruptured oil glands visible on the rind. The damage contrasts sharply with the bright orange peel. Natural lighting, macro detail, realistic citrus defect.",
+  "region": "side",
+  "seed": 1292485019,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 50.40220642089844
+}
