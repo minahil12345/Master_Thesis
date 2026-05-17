@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\apple\\discoloration\\pair_000_01_image.png",
+  "prompt": "A red apple with a prominent sunburn discoloration patch on the sun-exposed cheek. The patch is yellow-brown with a soft, gradual transition from the normal red color, covering a large area. The discolored region looks bleached and uneven, typical of sun scald or uneven ripening. Natural sunlight, detailed fruit photography.",
+  "region": "sun-exposed cheek",
+  "seed": 3326541034,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 43.75330352783203
+}

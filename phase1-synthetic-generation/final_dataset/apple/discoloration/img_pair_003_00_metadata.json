@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\apple\\discoloration\\pair_003_00_image.png",
+  "prompt": "A red apple with a prominent sunburn discoloration patch on the outer surface. The patch is yellow-brown with a soft, gradual transition from the normal red color, covering a large area. The discolored region looks bleached and uneven, typical of sun scald or uneven ripening. Natural sunlight, detailed fruit photography.",
+  "region": "outer surface",
+  "seed": 883470273,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 14.119038581848145
+}
