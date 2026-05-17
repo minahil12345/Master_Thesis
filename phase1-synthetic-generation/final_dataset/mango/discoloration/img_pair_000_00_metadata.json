@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\discoloration\\pair_000_00_image.png",
+  "prompt": "A mango with uneven ripening discoloration on the shoulder. The patch is green-yellow to pale orange, with irregular, blotchy edges and soft transitions. The discolored area lacks the rich golden hue of the ripe mango, showing sap burn or ripening disorder. Diffused natural lighting, detailed fruit quality image.",
+  "region": "shoulder",
+  "seed": 2267848158,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 14.661502838134766
+}

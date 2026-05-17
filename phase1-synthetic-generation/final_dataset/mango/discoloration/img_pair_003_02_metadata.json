@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\discoloration\\pair_003_02_image.png",
+  "prompt": "A mango with uneven ripening discoloration on the outer surface. The patch is green-yellow to pale orange, with irregular, blotchy edges and soft transitions. The discolored area lacks the rich golden hue of the ripe mango, showing sap burn or ripening disorder. Diffused natural lighting, detailed fruit quality image.",
+  "region": "outer surface",
+  "seed": 3157236836,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 35.37820816040039
+}
