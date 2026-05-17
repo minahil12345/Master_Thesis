@@ -1,0 +1,12 @@
+{
+  "source_healthy": "data\\apple\\healthy\\resized_1.jpg",
+  "source_mask": "knowledge_bases/masks/apple/deform_shoulder.png",
+  "transform_params": {
+    "rotation_degrees": -3.6328178586513147,
+    "scale_factor": 1.0417359011281495,
+    "translation_x": -77.0413295696674,
+    "translation_y": 80.69536971911012
+  },
+  "fruit_mask_used": true,
+  "region_name": "shoulder region"
+}

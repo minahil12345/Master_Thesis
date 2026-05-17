@@ -1,0 +1,12 @@
+{
+  "source_healthy": "data\\apple\\healthy\\resized_5.jpg",
+  "source_mask": "knowledge_bases/masks/apple/deform_side.png",
+  "transform_params": {
+    "rotation_degrees": -8.977655820031437,
+    "scale_factor": 1.0823586812948378,
+    "translation_x": 34.88795547333581,
+    "translation_y": -98.66241564052824
+  },
+  "fruit_mask_used": true,
+  "region_name": "side"
+}

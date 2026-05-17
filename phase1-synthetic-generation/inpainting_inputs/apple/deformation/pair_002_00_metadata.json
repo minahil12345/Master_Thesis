@@ -1,0 +1,12 @@
+{
+  "source_healthy": "data\\apple\\healthy\\resized_3.jpg",
+  "source_mask": "knowledge_bases/masks/apple/deform_bottom.png",
+  "transform_params": {
+    "rotation_degrees": 12.3879808849858,
+    "scale_factor": 0.9396908085820506,
+    "translation_x": 20.568431620615485,
+    "translation_y": 56.6833491171127
+  },
+  "fruit_mask_used": true,
+  "region_name": "bottom"
+}
