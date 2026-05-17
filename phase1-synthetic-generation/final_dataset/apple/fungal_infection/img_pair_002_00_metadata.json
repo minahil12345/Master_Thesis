@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\apple\\fungal_infection\\pair_002_00_image.png",
+  "prompt": "A red apple infected with apple scab disease on the near stem. The infection shows dark olive to black, rough, corky lesions with irregular circular shape. The fungal spots are raised and textured, clearly different from the smooth healthy skin. Sharp focus, daylight illumination, agricultural quality assessment, high resolution.",
+  "region": "near stem",
+  "seed": 637639879,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 10.849666595458984
+}
