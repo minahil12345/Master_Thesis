@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\deformation\\pair_003_00_image.png",
+  "prompt": "A mango with a visible dent and shape deformation on the beak tip. The fruit shows a flattened, indented area with gentle shadowing, distorting the natural oval contour. The skin follows the depression without breaking. Professional lighting emphasizing surface irregularities, realistic fruit grading.",
+  "region": "beak tip",
+  "seed": 4017599797,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 16.03847312927246
+}

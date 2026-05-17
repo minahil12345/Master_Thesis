@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\deformation\\pair_002_00_image.png",
+  "prompt": "A mango with a visible dent and shape deformation on the side. The fruit shows a flattened, indented area with gentle shadowing, distorting the natural oval contour. The skin follows the depression without breaking. Professional lighting emphasizing surface irregularities, realistic fruit grading.",
+  "region": "side",
+  "seed": 2053398810,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 12.700883865356445
+}

@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\deformation\\pair_000_02_image.png",
+  "prompt": "A mango with a visible dent and shape deformation on the belly. The fruit shows a flattened, indented area with gentle shadowing, distorting the natural oval contour. The skin follows the depression without breaking. Professional lighting emphasizing surface irregularities, realistic fruit grading.",
+  "region": "belly",
+  "seed": 2314368986,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 11.931563377380371
+}
