@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\bruise\\pair_004_02_image.png",
+  "prompt": "A ripe yellow mango with a prominent brown impact bruise on the cheek. The bruise is a dark brown, slightly depressed area with soft, collapsed tissue beneath the skin, contrasting sharply with the smooth yellow peel. The damaged region has a dull, matte appearance. Natural tropical light, macro detail, realistic post-harvest defect.",
+  "region": "cheek",
+  "seed": 1965093668,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 15.690199851989746
+}

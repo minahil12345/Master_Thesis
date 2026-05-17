@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\mango\\bruise\\pair_000_02_image.png",
+  "prompt": "A ripe yellow mango with a prominent brown impact bruise on the belly area. The bruise is a dark brown, slightly depressed area with soft, collapsed tissue beneath the skin, contrasting sharply with the smooth yellow peel. The damaged region has a dull, matte appearance. Natural tropical light, macro detail, realistic post-harvest defect.",
+  "region": "belly area",
+  "seed": 1756913239,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 15.320831298828125
+}
