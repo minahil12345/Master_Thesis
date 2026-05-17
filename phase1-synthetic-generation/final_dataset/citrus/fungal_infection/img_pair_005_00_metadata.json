@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\citrus\\fungal_infection\\pair_005_00_image.png",
+  "prompt": "An orange infected with citrus black spot disease on the outer peel. The infection shows circular, dark brown to black lesions with a hard, sunken center and raised borders. The spots have a rough, scabby texture, clearly distinguishable from the healthy rind. Daylight, high-resolution agricultural photography.",
+  "region": "outer peel",
+  "seed": 513698093,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 71.68219757080078
+}

@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\citrus\\fungal_infection\\pair_003_01_image.png",
+  "prompt": "An orange infected with citrus black spot disease on the sunken area. The infection shows circular, dark brown to black lesions with a hard, sunken center and raised borders. The spots have a rough, scabby texture, clearly distinguishable from the healthy rind. Daylight, high-resolution agricultural photography.",
+  "region": "sunken area",
+  "seed": 4105928489,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 37.64479446411133
+}
