@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\citrus\\deformation\\pair_001_02_image.png",
+  "prompt": "An orange with a visible dent and shape deformation on the surface. The fruit surface has a flat, indented area with subtle shadowing, creating an asymmetrical contour. The rind follows the depression, giving a misshapen appearance. Studio lighting to emphasize depth and texture.",
+  "region": "surface",
+  "seed": 2056863507,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 28.548542022705078
+}
