@@ -1,0 +1,9 @@
+{
+  "source_pair": "inpainting_inputs\\citrus\\discoloration\\pair_003_01_image.png",
+  "prompt": "An orange with uneven rind discoloration on the equatorial band. The patch is greenish-yellow to pale orange, covering a large area with soft, irregular edges. The discolored zone lacks the vibrant orange hue of the rest of the fruit, indicating a color break disorder. Diffused natural light, detailed grading image.",
+  "region": "equatorial band",
+  "seed": 311612515,
+  "attempt": 1,
+  "lora_used": true,
+  "difference_score": 18.66323471069336
+}
